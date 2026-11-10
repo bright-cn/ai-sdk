@@ -1,0 +1,66 @@
+{
+    "name": "@brightdata/ai-sdk",
+    "version": "0.1.0",
+    "description": "Bright Data tools for Vercel AI SDK - scrape, search, and dataset collection",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup src/index.ts --format esm --dts",
+        "test": "npm run build && node --test test/*.test.mjs",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "ai",
+        "ai-sdk",
+        "tools",
+        "brightdata",
+        "bright-data",
+        "web-scraping",
+        "search",
+        "serp",
+        "amazon",
+        "linkedin",
+        "instagram",
+        "data-extraction"
+    ],
+    "author": "Bright Data <support@brightdata.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nicecopy/bright-data-ai-sdk"
+    },
+    "homepage": "https://docs.brightdata.com/scraping-automation/ai-integrations/ai-sdk",
+    "bugs": {
+        "url": "https://github.com/nicecopy/bright-data-ai-sdk/issues"
+    },
+    "dependencies": {
+        "@brightdata/sdk": "^0.2.0"
+    },
+    "peerDependencies": {
+        "ai": "^5.0.0 || ^6.0.0",
+        "zod": "^4.0.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org",
+        "access": "public"
+    },
+    "devDependencies": {
+        "tsup": "^8.5.0",
+        "typescript": "^5.9.3",
+        "@types/node": "^22.0.0"
+    }
+}
